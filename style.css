@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital@0;1&display=swap');
+
+:root {
+  --background-color: rgba(255, 255, 255, 1);
+  --text-color: rgb(66, 66, 66);
+  --paragraph-color: rgb(66, 66, 66);
+}
+
+[data-theme='dark'] {
+  --background-color: #121212;
+  --text-color: rgb(87, 238, 255);
+  --paragraph-color: rgba(255, 255, 255, 0.8);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  font-family: 'Jost', sans-serif;
+  margin: 0px;
+  overflow-x: hidden;
+  position: relative;
+  transition: background-color 0.75s ease, color 0.75s ease;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:hover {
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--text-color);
+}
+
+.toggle-mode {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+i {
+  margin-left: 10px;
+}
+
+header {
+  width: 100%;
+}
+header h1,
+header .icon-container {
+  font-size: 40px;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  animation: spacein 2s linear;
+  margin-bottom: 0px;
+}
+
+header .icon-container {
+  font-size: 20px;
+}
+
+i {
+  cursor: pointer;
+  margin: 2px;
+}
+
+@keyframes spacein {
+  0% {
+    letter-spacing: 1.3em;
+    filter: blur(10px);
+    opacity: 0;
+  }
+  100% {
+    letter-spacing: 0em;
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+/* Sections */
+
+section {
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+/* Section 2 */
+
+#section-2 {
+  height: 100vh;
+}
+
+#section-2 img {
+  height: 30%;
+  width: auto;
+  position: relative;
+  top: -34%;
+  padding: 10px;
+  border: 5px solid var(--text-color);
+}
+
+/* Section 3 */
+.image-container {
+  position: relative;
+  top: -25%;
+  height: 50vh;
+}
+
+.image-container img {
+  height: 50%;
+  width: auto;
+  padding: 10px;
+  border: 5px solid var(--text-color);
+}
+
+.image-container img:not(:first-child) {
+  margin-left: 20px;
+}
+
+/* Section 4 */
+.blog-container {
+  margin: 0 auto;
+  width: 70ch;
+}
+
+.blog-item {
+  margin-bottom: 50px;
+}
+p {
+  color: var(--paragraph-color);
+}
+
+/* Section 5*/
+
+/* Wave */
+.wave {
+  width: 100%;
+  /* position: relative; */
+}
+
+.wave > svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Footer */
+
+footer {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+  z-index: 300;
+  color: black;
+}
